@@ -37,6 +37,15 @@ def generate_simple_lyrics(num_lines: int = 4, seed_word: str = "") -> str:
     adjectives = ["bright", "gentle", "soft", "golden", "endless", "sweet", "deep", "silent"]
     objects = ["night", "day", "song", "love", "hope", "light", "peace", "time"]
 
+    # --- Section Clonage de TA voix ---
+st.write("### 🎤 Enregistrement & Clonage")
+if st.button("Démarrer le clonage de ma voix", key="clonage_perso"):
+    # On utilise les réglages que tu as déjà créés (émotion et intensité)
+    audio_path = generate_light_cloning("Ceci est ma propre voix clonée avec succès", option_voix)
+    st.audio(audio_path)
+    st.success("Ta voix a été clonée !")
+
+    
     lyrics_lines = []
     for i in range(num_lines):
         adjective = random.choice(adjectives)
