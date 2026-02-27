@@ -37,7 +37,10 @@ def generate_simple_lyrics(num_lines: int = 4, seed_word: str = "") -> str:
     adjectives = ["bright", "gentle", "soft", "golden", "endless", "sweet", "deep", "silent"]
     objects = ["night", "day", "song", "love", "hope", "light", "peace", "time"]
 
-    # --- Section Clonage de TA voix ---
+
+
+
+# --- Section Clonage de TA voix ---
 st.write("### 🎤 Enregistrement & Clonage")
 if st.button("Démarrer le clonage de ma voix", key="clonage_perso"):
     # On utilise les réglages que tu as déjà créés (émotion et intensité)
