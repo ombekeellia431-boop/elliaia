@@ -35,7 +35,11 @@ def generate_simple_lyrics(num_lines: int = 4, seed_word: str = "") -> str:
     subjects = ["sun", "moon", "star", "dream", "heart", "melody", "soul", "sky", "river"]
     verbs = ["shines", "sings", "flows", "dreams", "whispers", "dances", "glows", "flies"]
     adjectives = ["bright", "gentle", "soft", "golden", "endless", "sweet", "deep", "silent"]
-    objects = ["night", "day", "song", "love", "hope", "light", "peace", "time"]
+    objects = ["night", "day", "song", "love", "hope", "light", "peace", "# --- Bouton de clonage de MA voix ---
+if st.button("Lancer le clonage de ma voix", key="bouton_clonage_perso"):
+    # Très important : ces 2 lignes doivent avoir un décalage (indentation)
+    audio_path = generate_light_cloning("Ceci est ma propre voix clonée", option_voix)
+    st.audio(audio_path)
 
 
 
